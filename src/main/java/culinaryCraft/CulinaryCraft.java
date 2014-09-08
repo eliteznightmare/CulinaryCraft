@@ -19,7 +19,7 @@ public class CulinaryCraft {
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
-		
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 	}
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent event){
