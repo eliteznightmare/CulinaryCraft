@@ -8,6 +8,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import culinaryCraft.handler.ConfigurationHandler;
+import culinaryCraft.items.ItemInit;
 import culinaryCraft.proxy.IProxy;
 import culinaryCraft.Reference;
 
@@ -23,6 +24,7 @@ public class CulinaryCraft {
 	public void preInit(FMLPreInitializationEvent event){
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		ItemInit.init();
 	}
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent event){
